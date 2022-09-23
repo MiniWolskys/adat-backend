@@ -1,0 +1,1 @@
+from custom_request.riot_request.summoner_request import summoner_request
