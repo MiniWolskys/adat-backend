@@ -1,9 +1,9 @@
 from requests import Response
 
 
-def generate_object_from_riot_api(res: Response, target: any):
+def generate_object_from_riot_api(data: any, target: any):
     ret = target()
-    data = res.json()
     for attr, val in ret.__dict__.items():
-        setattr(ret, attr, data[attr])
+        if attr in data:
+            setattr(ret, attr, data[attr])
     return ret
