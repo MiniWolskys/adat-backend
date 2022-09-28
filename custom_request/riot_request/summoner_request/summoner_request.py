@@ -1,6 +1,6 @@
 from data_object.summoner_object import SummonerObject
 from custom_request.riot_request import riot_request
-from data_object.custom_object_factory import generate_object_from_riot_api
+from data_object.factory.custom_object_factory import generate_object_from_riot_api
 import requests
 
 url_summoner_by_name = '/lol/summoner/v4/summoners/by-name/'
